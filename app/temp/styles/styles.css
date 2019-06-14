@@ -356,6 +356,21 @@ template {
 [hidden] {
   display: none;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+a {
+    color: #d59541;
+}
 .large-hero {
   border-bottom: 10px solid #2f5572;
   position: relative;
@@ -422,21 +437,47 @@ template {
     
   }
     }
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+.page-section {
+    padding: 1.2rem 0;
 }
-img {
-  max-width: 100%;
-  height: auto;
+@media(min-width: 800px) {
+.page-section {
+      padding: 4.5rem 0
 }
-*{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-}
-a {
-    color: #d59541;
-}
+    }
+.page-section--no-b-padding-until-medium {
+        padding-bottom: 0;
+    }
+@media(min-width: 800px) {
+.page-section--no-b-padding-until-medium {
+            padding-bottom: 4.5rem
+    }
+    }
+.page-section--no-b-padding-until-large {
+        padding-bottom: 0;
+    }
+@media(min-width: 1010px) {
+.page-section--no-b-padding-until-large {
+            padding-bottom: 4.5rem
+    }
+    }
+.page-section--blue {
+        background-color: #2f5572;
+        color: #fff;
+    }
+.page-section--testimonials {
+        background-color: #e0e6ef;
+    
+        
+    }
+@media(min-width: 1010px) {
+.page-section--testimonials {
+        background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover
+    
+        
+    }
+    }
 .btn {
   background-color: #2f5572;
   color: #FFF;
@@ -468,6 +509,26 @@ a {
 .wrapper--medium {
         max-width: 976px;
     }
+.wrapper--no-padding-until-medium {
+        padding-left: 0;
+        padding-right: 0;
+    }
+@media(min-width: 800px) {
+.wrapper--no-padding-until-medium {
+          padding-left: 18px;
+          padding-right: 18px
+    }
+    }
+.wrapper--no-padding-until-large {
+        padding-left: 0;
+        padding-right: 0;
+    }
+@media(min-width: 1010px) {
+.wrapper--no-padding-until-large {
+          padding-left: 18px;
+          padding-right: 18px
+    }
+    }
 .wrapper .wrapper {
         padding-left: 0;
         padding-right: 0;
@@ -479,18 +540,6 @@ a {
 .wrapper--b-margin { 
         margin-bottom: 3.875rem  
     }
-    }
-.page-section {
-    padding: 1.2rem 0;
-}
-@media(min-width: 800px) {
-.page-section {
-      padding: 4.5rem 0
-}
-    }
-.page-section--blue {
-        background-color: #2f5572;
-        color: #fff;
     }
 .headline {
  font-size: 1.9rem;
@@ -538,11 +587,17 @@ a {
         clear: both;
         display: table;
     }
+.row--t-padding {
+        padding-top: 80px;
+    }
 .row--gutters {
         margin-right: -65px;
     }
 .row--gutters-large {
         margin-right: -100px;   
+    }
+.row--gutters-small {
+        margin-right: -45px;
     }
 .row--gutters > div{
         padding-right: 65px;
@@ -550,6 +605,9 @@ a {
 .row--gutters-large > div {
         padding-right: 100px;
 
+    }
+.row--gutters-small > div {
+       padding-right: 45px; 
     }
 .row__b-margin-until-medium {
         margin-bottom: 1rem;
@@ -581,6 +639,60 @@ a {
             width: 63%;  
         }
     }
+@media(min-width: 1010px) {
+        
+        .row__b-margin-until-large{
+            margin-bottom: 0;
+        }    
+    .row__mlarge-4 {
+        float: left;
+        width: 33.33%;
+    } 
+      
+    .row--large-4--larger {
+            width: 37%;
+        }
+  .row__large-6 {
+      float: left;
+      width: 50%;
+        }    
+        
+    
+    .row__large-8 {
+        float: left;
+        width: 66.66%;   
+    }
+        .row--large-8--smaller {
+            width: 63%;  
+        }
+    }
+/*begin equal height rules*/
+@media(min-width: 800px) {
+.row--equal-height-al-medium {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+    }
+    }
+.row--equal-height-al-medium > div {
+            float: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+@media(min-width: 1010px) {
+.row--equal-height-al-large {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+    }
+    }
+.row--equal-height-al-large > div {
+            float: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
 .generic-content-container p {
         font-weight: 300;
         line-height: 1.65; 
@@ -608,6 +720,9 @@ a {
 .section-title strong {
         font-weight: 500;
     }
+.section-title--blue {
+        color: #2f5572;
+    }
 .section-title__icon {
         display: block;
         margin-left: auto;
@@ -616,7 +731,9 @@ a {
     }
 @media (min-width: 530px) {
 .section-title__icon {
-            margin-right: .5rem;
+            position: relative;
+            top: 8px;
+            margin-right: 1rem;
             margin-left: 0;
             margin-bottom: 0;
             display: inline-block
@@ -656,4 +773,51 @@ a {
             font-size: 1.875rem;
             text-align: left
     }
+    }
+.testimonial {
+  background-color: rgba(255 ,255, 255, .8);
+  padding: 0 18px 1px 18px;
+  margin-bottom: 98px;
+}
+@media(min-width: 1010px) {
+.testimonial {
+        padding-bottom: 0;
+        padding: 0 1.8425rem 1px 1.8425rem
+}
+    }
+.testimonial--last {
+     margin-bottom: 0px;
+        
+    }
+@media(min-width: 800px) {
+.testimonial--last {
+            margin-bottom: 98px
+        
+    }
+    }
+.testimonial__photo {
+        border-radius: 80px;
+        overflow: hidden;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto -80px auto;
+        position: relative;
+        top: -80px;
+        border: 6px solid rgba(255 ,255, 255, .8);
+        
+    }
+.testimonial__title {
+        color: #2f5572;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+        
+    }
+.testimonial__suptitle {
+        color: #d59541;
+        text-align: center;
+        font-weight: 400;
+        font-size: .9345rem;
+        margin: .25rem 0 1rem 0;
     }
