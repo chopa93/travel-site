@@ -91,7 +91,7 @@
     
     
     /*begin equal height rules*/
-    &--equal-height-al-medium {
+    .flexbox &--equal-height-al-medium {
         @mixin atmedium{
             display: flex;
         }
@@ -100,9 +100,10 @@
             display: flex;
         }
     }
-     &--equal-height-al-large {
+    &--equal-height-al-large {
         @mixin atlarge{
             display: flex;
+             
         }
         & > div {
             float: none;
